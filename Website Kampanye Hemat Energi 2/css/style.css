@@ -1,0 +1,914 @@
+/* ========================================================
+   ENERGI BIJAK - STYLESHEET RESMI
+   Kampanye Konservasi dan Hemat Energi Sekolah
+   ======================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #24352a;
+  background: #f7fbf4;
+}
+
+/* --- HEADER & NAVBAR --- */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e1eed8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-icon {
+  font-size: 24px;
+}
+
+.navbar h1 {
+  color: #2f7d32;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #24352a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2f7d32;
+  background: #eef8ea;
+}
+
+.nav-links a.active {
+  color: #ffffff;
+  background: #2f7d32;
+}
+
+/* --- BUTTONS --- */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.button-primary {
+  background: #2f7d32;
+  color: #ffffff;
+}
+
+.button-primary:hover {
+  background: #256627;
+  transform: translateY(-1px);
+}
+
+.button-outline {
+  background: transparent;
+  color: #2f7d32;
+  border: 2px solid #2f7d32;
+}
+
+.button-outline:hover {
+  background: #eef8ea;
+}
+
+.full-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* --- LABELS & BADGES --- */
+.label {
+  color: #c48a10;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.badge-accent {
+  display: inline-block;
+  background: #fdf3d8;
+  color: #b7790b;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.badge-pill {
+  background: #2f7d32;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.badge-rombel {
+  background: #e8f4df;
+  color: #2f7d32;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* --- HERO & INTRO (BERANDA) --- */
+.hero {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 60px 30px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: #e8f4df;
+  border-radius: 24px;
+}
+
+.hero h2,
+.page h2 {
+  font-size: clamp(28px, 4.5vw, 44px);
+  line-height: 1.15;
+  margin-bottom: 14px;
+  color: #19361e;
+  font-weight: 800;
+}
+
+.hero p {
+  margin-bottom: 24px;
+  font-size: 17px;
+  color: #3b5042;
+}
+
+.hero-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.lamp {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.intro,
+.cards,
+.page {
+  max-width: 1100px;
+  margin: 45px auto;
+  padding: 0 20px;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header .subtitle {
+  font-size: 17px;
+  color: #4a5e50;
+  max-width: 800px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cards article {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e7f0e3;
+}
+
+.cards article h3 {
+  color: #2f7d32;
+  margin-bottom: 8px;
+}
+
+/* --- STATS SUMMARY GRID --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 20px 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e1eed8;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stat-icon {
+  font-size: 32px;
+  background: #e8f4df;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.stat-info h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #19361e;
+  line-height: 1.2;
+}
+
+.stat-info p {
+  font-size: 13px;
+  color: #607666;
+  margin-top: 3px;
+}
+
+/* --- CHART CARDS & CONTAINERS --- */
+.chart-card {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e3ede0;
+  margin-bottom: 28px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.chart-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chart-badge {
+  background: #e8f4df;
+  color: #2f7d32;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.chart-card h3 {
+  font-size: 18px;
+  color: #19361e;
+  font-weight: 700;
+}
+
+.chart-legend-hint {
+  font-size: 12px;
+  color: #b7790b;
+  font-weight: 600;
+  background: #fdf3d8;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+}
+
+.chart-note {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: #f4f9f1;
+  border-left: 4px solid #2f7d32;
+  border-radius: 0 10px 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3b5042;
+}
+
+.charts-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* --- BANNER AKSI --- */
+.action-banner {
+  background: linear-gradient(135deg, #2f7d32, #1b5e20);
+  color: white;
+  padding: 36px 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.action-banner h3 {
+  font-size: 26px;
+  color: white;
+  margin: 8px 0 10px;
+}
+
+.action-banner p {
+  color: #dcedc8;
+  font-size: 16px;
+  max-width: 750px;
+  margin-bottom: 20px;
+}
+
+.action-banner .button {
+  background: #ffffff;
+  color: #1b5e20;
+}
+
+.action-banner .button:hover {
+  background: #f1f8e9;
+}
+
+/* --- SECTION BLOCKS (FASE 3) --- */
+.section-block {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.section-title-wrap {
+  margin-bottom: 22px;
+}
+
+.section-title-wrap h3 {
+  font-size: 24px;
+  color: #19361e;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.section-title-wrap p {
+  color: #4a5e50;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+/* --- RECOMMENDATIONS GRID --- */
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.recom-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1eed8;
+  display: flex;
+  flex-direction: column;
+}
+
+.recom-badge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.recom-code {
+  background: #e8f4df;
+  color: #2f7d32;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.recom-stat {
+  font-size: 12px;
+  color: #b7790b;
+  font-weight: 700;
+  background: #fdf3d8;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.recom-card h4 {
+  font-size: 18px;
+  color: #19361e;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.recom-data-insight {
+  background: #f6faf3;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #3b5042;
+  margin-bottom: 14px;
+  border-left: 3px solid #2f7d32;
+}
+
+.recom-actions {
+  font-size: 14px;
+  color: #2b3d30;
+  flex-grow: 1;
+}
+
+.recom-actions ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.recom-actions li {
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+/* --- 7-DAY CHALLENGE TRACKER --- */
+.challenge-section {
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 22px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1eed8;
+}
+
+.progress-box {
+  background: #f6faf3;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #e1eed8;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 14px;
+  background: #ddecd6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #43a047, #2f7d32);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.congrats-card {
+  margin-top: 14px;
+  padding: 12px 18px;
+  background: #e8f5e9;
+  border: 1px solid #81c784;
+  border-radius: 10px;
+  color: #1b5e20;
+  font-size: 14px;
+}
+
+.challenge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.challenge-card {
+  background: #ffffff;
+  border: 1px solid #e3ece0;
+  border-radius: 14px;
+  padding: 16px 20px;
+  transition: all 0.2s ease;
+}
+
+.challenge-card:hover {
+  border-color: #a5d6a7;
+  background: #fbfdfa;
+}
+
+.challenge-card.completed {
+  background: #eef8ea;
+  border-color: #81c784;
+}
+
+.challenge-card.completed .challenge-info strong {
+  text-decoration: line-through;
+  color: #55705d;
+}
+
+.challenge-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.challenge-checkbox {
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  accent-color: #2f7d32;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.challenge-info strong {
+  display: block;
+  font-size: 16px;
+  color: #19361e;
+  margin-bottom: 4px;
+}
+
+.challenge-info p {
+  font-size: 14px;
+  color: #4a5e50;
+  margin: 0;
+}
+
+.challenge-footer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* --- COMMITMENT FORM & FEED (FASE 3) --- */
+.commitment-section {
+  margin-top: 45px;
+}
+
+.commitment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.commitment-form-box {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1eed8;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #24352a;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #c8d8c2;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #24352a;
+  background: #fdfefd;
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #2f7d32;
+  box-shadow: 0 0 0 3px rgba(47, 125, 50, 0.15);
+}
+
+.alert-success {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: #e8f5e9;
+  border: 1px solid #81c784;
+  border-radius: 10px;
+  color: #1b5e20;
+  font-size: 14px;
+}
+
+.commitment-feed-box {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1eed8;
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf4ea;
+}
+
+.feed-header h4 {
+  font-size: 17px;
+  color: #19361e;
+}
+
+.commitment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.commitment-card {
+  background: #f7faf5;
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid #e3ede0;
+}
+
+.commitment-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.commitment-card-header strong {
+  font-size: 15px;
+  color: #19361e;
+}
+
+.commitment-text {
+  font-size: 13.5px;
+  color: #384c3e;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.commitment-time {
+  font-size: 11px;
+  color: #7b9181;
+}
+
+/* --- ENERGY CALCULATOR --- */
+.calc-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1eed8;
+}
+
+.calc-sliders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.slider-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.slider-group strong {
+  color: #2f7d32;
+  font-size: 15px;
+}
+
+.range-slider {
+  width: 100%;
+  height: 8px;
+  accent-color: #2f7d32;
+  cursor: pointer;
+}
+
+.calc-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.calc-result-item {
+  background: #e8f4df;
+  padding: 22px 18px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.calc-result-icon {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.calc-result-item h4 {
+  font-size: 24px;
+  color: #19361e;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.calc-result-item p {
+  font-size: 13px;
+  color: #4a5e50;
+  font-weight: 600;
+}
+
+.calc-note {
+  font-size: 12px;
+  color: #778d7e;
+  text-align: center;
+}
+
+/* --- FLOW NAV --- */
+.flow-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid #e3ede0;
+}
+
+/* --- STEPS (TENTANG) --- */
+.steps {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.steps div {
+  background: #e8f4df;
+  padding: 20px;
+  border-radius: 14px;
+  min-width: 180px;
+  flex: 1;
+}
+
+.steps b {
+  display: block;
+  font-size: 28px;
+  color: #d49b22;
+}
+
+.steps span {
+  font-weight: 700;
+  color: #19361e;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: #e8f4df;
+  padding: 35px 20px;
+  margin-top: 60px;
+  border-top: 1px solid #d8e8ce;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-sub {
+  font-size: 13px;
+  color: #55705d;
+  margin-top: 6px;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-two-col,
+  .recommendations-grid,
+  .commitment-grid,
+  .calc-sliders {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    margin: 15px;
+    padding: 35px 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    margin-top: 25px;
+  }
+
+  .flow-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .flow-nav .button {
+    text-align: center;
+  }
+}
